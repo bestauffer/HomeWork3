@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Form Example 1</title>
+      <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+
+  <!-- forms started with the idea of sending encoded data to back up to a website -->
+  <!-- <form name = "mainFrom" action="http:// mywebsite/action_page"></form> -->
+  <!-- which we may well do in other projects later, but for now, we want to got to a js function -->
+
+<!-- return set to false to prevent default form submission to a URL -->
+<form id = "mainForm" name = "mainFrom">
+
+<!--       The <fieldset> tag is used to group related elements in a form. -->
+	<fieldset id="custInfo">
+    <!--       The <legend> tag is puts a title on this subset of the form -->
+    <legend>Customer Information</legend>
+    <!--       for= some id connects the label to to the input box -->
+    <label for="custname"> Name:</label>
+    <input name="custname" id="custname" />
+    <br>
+    <label for="city">City:</label>
+    <input name="city" id="city" />
+    <br>
+
+    <label for="Payment">Payment Preference</label>
+        <br>
+        <select id="paymentType">
+          <option>Visa or MC</option>
+          <option>Cash</option>
+          <option>Check</option>
+        </select>
+		
+      <!-- here we submit to a local js file -->
+    <button type ='submit' id="addElem" onclick="return getData()">Submit</button>
+    
+  </fieldset> 
+
+  <ul id="list">
+    
+    </ul>
+  
+</form>
+
+
+
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
